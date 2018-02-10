@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ /* app/assets/layout.scss */
+
+ body {
+   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+   font-size: 15px;
+   background: #f2f5f8;
+   font-weight: 300;
+ }
