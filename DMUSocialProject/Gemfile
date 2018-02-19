@@ -1,8 +1,14 @@
 source 'https://rubygems.org'
 
-
+gem 'devise'
+# This is to give the application a Twitter UI feel to the navbar
+gem 'bootstrap-sass', '~> 3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
+# Use pg for heroku database.
+gem 'pg'
+# Heroku pre-req
+gem 'rails_12factor', group: :production # don't use locally, only on heroku
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -38,6 +44,7 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
