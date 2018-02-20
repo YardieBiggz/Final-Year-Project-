@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users do
+  member do
+    get :following, :followers
+  end
+end
+resources :relationships, only: [:create, :destroy]
+resources :posts
+
+  #This defines the routepage
+  root 'pages#index'
+
+  # This is the Definition Routes for Pages
+  get '/home' => 'pages#home' # override default routes.
+  get '/user/:id' => 'pages#profile'
+  get '/explore' => 'pages#explore'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
