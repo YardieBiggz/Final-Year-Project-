@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="col-xs-6">
-        <%= render '/components/post_form' %><% if user_signed_in? %> <br> <% end %> <br>
+        <%= render '/postcomponents/post_form' %><% if user_signed_in? %> <br> <% end %> <br>
 
         <% for @p in @posts %>
         <div class="panel panel-default post-panel">
