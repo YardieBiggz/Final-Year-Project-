@@ -7,10 +7,13 @@
       </div>
       <div class="col-sm-11">
         <%= form_for(@newPost) do |f| %>
-
               <div class="field" style="margin-left: 10px;">
                 <%= f.text_field :content, autofocus: true, class: "form-control" %>
                 <span type="button" class="btn btn-submit" style="float: right; margin-top: 3px;"><%= f.submit "Add Post", class: "btn btn-primary" %></span>
+                <%= link_to 'Delete Post',
+               post_path(@post),
+                           method: :delete,
+                           data: { confirm: 'Are you sure?' } %>
               </div>
 
         <% end %>
