@@ -14,9 +14,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "style.css";
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Passion+One:400");
 
-body {
-    background-color: #123750;
+
+html, body {
+    background-image: url("/bg1.jpg");
+    height: 100%;
 }
 .rounded-img {
     border-radius: 5%;
@@ -31,7 +35,7 @@ body {
     display: block;
 }
 .post-panel {
-    margin-top: -21px;
+    margin-top: -12px;
 }
 .post-title {
     text-align: left;
@@ -57,7 +61,7 @@ body {
     margin-right: 75px;
 }
 .post-form-panel {
-    margin-bottom: -21px;
+    margin-bottom: -10px;
 }
 .panel-image img.panel-image-preview {
     width: 100%;
@@ -85,4 +89,9 @@ body {
     width: 100%;
     height: 500px;
     margin-top: -21px;
+}
+
+.names {
+  color: rgb(100, 100, 100);
+  text-align: center;
 }

@@ -1,4 +1,18 @@
-<center><h2>Edit Your Profile</h2></center>
+<section id="animegrid">
+  <main class="container">
+    <h1 class="lang" key="chottolan3"> Edit Account Information</h1>
+  </main>
+</section>
+
+<main id="youtubemain">
+  <!-- Main -->
+  <main id="main-wrapper">
+
+    <main id="chottoitsanimecontainer">
+      <span class="image">
+        <img src="\edit1.png"></img>
+      </span>
+    </main>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -35,4 +49,6 @@
 <% end %>
 <br>
 
-<small><%= link_to "delete your account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></small>
+<h5><%= link_to "Remove Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></h5>
+</main-wrapper>
+</main>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get :following, :followers
   end
 end
+
 resources :relationships, only: [:create, :destroy]
 resources :posts
 
@@ -17,6 +18,11 @@ resources :posts
   get '/home' => 'pages#home' # override default routes.
   get '/user/:id' => 'pages#profile'
   get '/explore' => 'pages#explore'
+  get '/aboutus' => 'pages#aboutus'
+  get '/societies' => 'pages#societies'
+  get '/profile' => 'pages#profile'
+  get '/new' => 'posts#new'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   # back-end code for pages/index
   def index
+    
   end
 
   # back-end code for pages/home
@@ -12,7 +13,7 @@ class PagesController < ApplicationController
       following.push(@f.id)
     end
 
-    @posts = Post.where("user_id IN (?)", following)
+    @post = Post.where("user_id IN (?)", following)
     @newPost = Post.new
   end
 
@@ -26,17 +27,16 @@ class PagesController < ApplicationController
       redirect_to root_path, :notice=> "User not found!"
     end
 
-    @posts = Post.all.where("user_id = ?", User.find_by_username(params[:id]).id)
+    @post = Post.all.where("user_id = ?", User.find_by_username(params[:id]).id)
     @newPost = Post.new
-
-    @toFollow = User.all.last(5)
+    @toFollow = User.all.last(10)
   end
 
   # back-end code for pages/explore
   def explore
-    @posts = Post.all
+    @post = Post.all
     @newPost = Post.new
-        @toFollow = User.all.last(5)
+        @toFollow = User.all.last(10)
   end
 
 end
