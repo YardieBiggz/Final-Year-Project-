@@ -71,9 +71,12 @@ class PostsController < ApplicationController
 
     def destroy
       @post = Post.find(params[:id])
-      @post.destroy
+      if @post.destroy
       redirect_to explore_path, :notice => "Your post has been deleted"
-    end
+    else
+    redirect_to current_user_path, :notice => "Your post wasn't deleted"
+  end
+end
 
 
     private
