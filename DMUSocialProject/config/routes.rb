@@ -10,7 +10,6 @@ end
 
 resources :relationships, only: [:create, :destroy]
 resources :posts
-
   #This defines the routepage
   root 'pages#index'
 

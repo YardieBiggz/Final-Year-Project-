@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-
-
-
 gem 'active_skin'
 gem 'activeadmin'
+#For user authentication 
 gem 'devise'
 # This is to give the application a Twitter UI feel to the navbar
 gem 'bootstrap-sass', '~> 3.3.7'

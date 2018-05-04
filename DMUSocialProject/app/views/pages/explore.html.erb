@@ -48,10 +48,6 @@
             <div class="col-sm-11">
               <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
               <p class="post-content"><%= @p.content %></p>
-              <% if user_signed_in? %>
-              <%= link_to 'Edit', edit_post_path(@post) %> |
-              <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %>
-              <% end %>
             </div>
 
 
