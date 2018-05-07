@@ -92,6 +92,21 @@ html, body {
 }
 
 .names {
-  color: rgb(100, 100, 100);
+  color: lightblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Post-Alert {
+  color: Red;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.Post-Notice {
+  color: Green;
+  font-weight: bold;
+  font-size: 1.3em;
   text-align: center;
 }

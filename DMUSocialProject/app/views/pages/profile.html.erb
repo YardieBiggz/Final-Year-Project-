@@ -25,7 +25,7 @@
 
               <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
               <p class="post-content"><%= @p.content %></p>
-              <% if user_signed_in? %> 
+              <% if current_user && current_user.id == @p.user_id %>
             <%= link_to 'Edit', edit_post_path(@p) %> |
             <%= link_to 'Delete', post_path(@p), method: :delete, data: { confirm: "Are you sure?"} %>
               <% end %>

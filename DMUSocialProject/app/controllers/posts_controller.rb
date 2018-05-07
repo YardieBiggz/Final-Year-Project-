@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy,]
   before_action :authenticate_user!, except: [:show]
-
   # before_action :find_post, only: [:show, :edit, :update, :destroy]
   #
   #
@@ -69,13 +68,15 @@ class PostsController < ApplicationController
        end
     end
 
-    def destroy
-      @post = Post.find(params[:id])
+   def destroy
+      if current_user == @post.user
+       @post = Post.find(params[:id])
       if @post.destroy
-      redirect_to explore_path, :notice => "Your post has been deleted"
+      redirect_to :back, :notice => "Your post has been deleted"
     else
-    redirect_to current_user_path, :notice => "Your post wasn't deleted"
+    redirect_to explore_path, :notice => "Your post wasn't deleted"
   end
+end
 end
 
 
