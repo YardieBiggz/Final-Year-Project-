@@ -1,9 +1,5 @@
-
-
-
 <div class="row">
     <div class="col-xs-3">
-
         <div class="panel panel-default">
           <div class="panel-image hide-panel-body">
             <img src="/dmubanner1.jpg" class="panel-image-preview">
@@ -24,9 +20,23 @@
 
           </div>
         </div>
-
         <div class="panel panel-default">
           <div class="panel-body">
+
+
+     <h5 style="color: grey; font-size: 130%;">Home Page</h5>
+        <span style="color: darkblue;">What to do</span><br>
+        <p> Within the home page you can view post messages of users that are following you, by clicking on a user name you will be
+          able to view thier profile. You can aslo post a message from here as well, all messages that are post will redirect you to the
+          explore page to be seen along with all the users that have posted.
+        </p>
+
+        <span style="color: darkblue;">Wanna Get In Contact</span><br>
+        <p> To get in contact with use depending on the situation, we are always avialable to help. You can also view the about page which will give
+        the university location and how to get in contact with us. But if that is not enough, the link bottow will direct you to the official information
+        regarding contacting the right person that you need.</p>
+        <a href="http://www.dmu.ac.uk/General/Contact-us.aspx?gclid=CjwKCAjw8r_XBRBkEiwAjWGLlGb5MPeQcLB8-D-yfraxNLt5STsoqS6IFdcWCCu4My4o6p5aC3NRWhoC8e0QAvD_BwE">Contact Us?</a><br>
+
 
 
 
@@ -50,14 +60,9 @@
               <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
               <p class="post-content"><%= @p.content %></p>
             </div>
-
-
-
           </div>
         </div>
         <% end %>
-
-
     </div>
     <div class="col-xs-3">
         <div class="panel panel-default">

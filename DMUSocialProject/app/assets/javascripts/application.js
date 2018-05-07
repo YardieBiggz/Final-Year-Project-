@@ -93,3 +93,11 @@ function initMap() {
 
     });
 }
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Feilds must be filled out correctly");
+        return false;
+    }
+}
